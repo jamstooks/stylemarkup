@@ -1,0 +1,17 @@
+body, html {
+    background-color: #eeeeee;
+    margin: 10px;
+}
+
+.document {
+    background-color: white;
+    border: 2px solid #666666;
+    color: #555555;
+    width: 700px;
+    margin: 20px auto;
+    padding: 10px 50px;
+}
+
+td, th {
+    padding: 15px;
+}

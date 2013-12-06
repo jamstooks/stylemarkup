@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'default.css' %}">
+		<link rel="stylesheet" href="{% static 'transform.css' %}">
+	</head>
+
+  <body>
+		{% block markup %}{% endblock %}
+		
+		<div class='sm_menu'>
+			<a class="btn btn-default text-muted" href="/" role="button">
+				<h4 class="text-muted"><span class='text-info'>Style</span><span class='text-danger' style="font-family:monospace;">&lt;Markup&gt;</span></h4>
+			</a>
+		</div>
+		
+		<div class='transform_menu'>
+			<a class="btn btn-default" href="." role="button" title='Reload'>
+				<span class="glyphicon glyphicon-refresh"></span>
+			</a>
+			<!--
+			<a class="btn btn-default" href="." role="button">
+				<span class="glyphicon glyphicon-tint"></span>
+			</a>
+			-->
+			<a class="btn btn-default" href="pdf/" role="button" title='PDF Export'>
+				<span class="glyphicon glyphicon-file"></span>
+			</a>
+			<!--
+			<a class="btn btn-default" href="." role="button">
+				<span class="glyphicon glyphicon-print"></span>
+			</a>
+			-->
+		</div>
+	</body>
+</html>

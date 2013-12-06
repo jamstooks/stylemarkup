@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load bootstrap %}
+
+{% block content %}
+
+	<div class="jumbotron">
+    <h1>Your Source</h1>
+    <p class="lead">Provide your markup to see it styled up in HTML with CSS.</p>
+		<form method='post' action='.' class="form-horizontal" role="form">
+				{% csrf_token %}
+		  	{{ form|bootstrap_horizontal }}
+    <p><button class="btn btn-lg btn-success" type="submit">Style it up!</button></p>
+		</form>
+  </div>
+
+  <div class="row marketing">
+    <div class="col-sm-4">
+      <h4>Supported Markups</h4>
+			<a href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a><br/>
+			<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>
+    </div>
+    <div class="col-sm-4">
+      <h4>Supported Sources</h4>
+			<a href="https://gist.github.com/">gist.github.com</a><br/>
+			Git (coming soon)<br/>
+			Bitbucket (coming soon)<br/>
+			Direct Input (maybe)
+    </div>
+    <div class="col-sm-4">
+      <h4>Output Options</h4>
+			HTML<br/>
+			PDF (coming soon)
+    </div>
+  </div>
+{% endblock %}
