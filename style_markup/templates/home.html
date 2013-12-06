@@ -5,8 +5,7 @@
 {% block content %}
 
 	<div class="jumbotron">
-    <h1>Your Source</h1>
-    <p class="lead">Provide your markup to see it styled up in HTML with CSS.</p>
+    <p class="lead">See your markup styled up in HTML with CSS.</p>
 		<form method='post' action='.' class="form-horizontal" role="form">
 				{% csrf_token %}
 		  	{{ form|bootstrap_horizontal }}
@@ -16,21 +15,39 @@
 
   <div class="row marketing">
     <div class="col-sm-4">
-      <h4>Supported Markups</h4>
+      <h4>
+				<span class='glyphicon glyphicon-list-alt'></span>
+				Supported Markups
+			</h4>
 			<a href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a><br/>
 			<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>
     </div>
     <div class="col-sm-4">
-      <h4>Supported Sources</h4>
+      <h4>
+				<span class='glyphicon glyphicon-transfer'></span>
+				Supported Sources
+			</h4>
 			<a href="https://gist.github.com/">gist.github.com</a><br/>
 			Git (coming soon)<br/>
 			Bitbucket (coming soon)<br/>
 			Direct Input (maybe)
     </div>
     <div class="col-sm-4">
-      <h4>Output Options</h4>
+      <h4>
+				<span class='glyphicon glyphicon-file'></span>
+				Output Options
+			</h4>
 			HTML<br/>
-			PDF (coming soon)
+			PDF
+		</div>
+	</div>
+	<div class="row marketing">
+		<div class="col-sm-4 col-sm-offset-8">
+			<h4>
+				<span class="glyphicon glyphicon-tint"></span>
+				Themes
+			</h4>
+			Coming Soon
     </div>
   </div>
 {% endblock %}
