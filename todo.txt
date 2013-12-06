@@ -1,3 +1,4 @@
+ [ ] add readme
  [ ] tests!
  [ ] error handling
  [ ] celery tasks
