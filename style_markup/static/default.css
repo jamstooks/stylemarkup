@@ -5,13 +5,87 @@ body, html {
 
 .document {
     background-color: white;
-    border: 2px solid #666666;
-    color: #555555;
-    width: 700px;
-    margin: 20px auto;
-    padding: 10px 50px;
+    color: #444444;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-td, th {
-    padding: 15px;
+.document table
+{
+    border-collapse: collapse;
+    border: 1px solid #ffffff;
+}
+
+.document tr {
+    virtical-align: middle;
+}
+
+.document td {
+    background-color: #eeeeee;
+    virtical-align: middle;
+}
+
+.document th {
+    background-color: #dddddd;
+    virtical-align: middle;
+}
+
+.document h1 {
+    font-size: 1.7em;
+    border-bottom: 1px solid #cccccc;
+}
+
+.document h1.title {
+    font-size: 2.2em;
+    border-bottom: 0;
+}
+
+.document h2 {
+    font-size: 1.5em;
+}
+
+@media screen {
+    .document {
+        border: 2px solid #666666;
+        width: 700px;
+        margin: 20px auto;
+        padding: 20px 50px;
+    }
+    
+    .document td, .document th {
+        padding: 15px;
+    }
+}
+
+@media print {
+    .document {
+        border-width: 0px;
+        width: auto;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .document tr {
+        border: 0;
+    }
+    
+    .document td, .document th {
+        padding: 5px;
+        margin: 2px;
+        display: block;
+        border: 2px solid #ffffff;
+        virtical-align: middle;
+        line-height: 1.5;
+    }
+    
+    .document table {
+        border-width: 10px;
+        display: block;
+        border: 0;
+        margin-bottom: 25px;
+    }
+    
+    .document a {
+        color: #4183c4;
+        text-decoration: none;
+    }
 }

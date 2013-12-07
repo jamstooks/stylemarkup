@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.http import HttpResponse
+from django.conf import settings
 
 from export import render_to_pdf
 from tasks import load_gist
@@ -24,6 +25,11 @@ class GistPDF(TransformGist):
     mimetype = 'application/pdf'
     extension = "pdf"
     template_name = "transformer/pdf.html"
+    
+    def get_context_data(self, **kwargs):
+        _c = super(GistPDF, self).get_context_data(**kwargs)
+        _c["project_path"] = settings.BASE_DIR
+        return _c
     
     def render_to_response(self, context, **response_kwargs):
         """ Renders the excel file as a response """

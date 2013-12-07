@@ -4,6 +4,8 @@ from django.template import Context
 import cStringIO as StringIO
 import ho.pisa as pisa
 
+import sys
+
 def render_to_pdf(template_src, context_dict):
     """
         Creates a pdf from a temlate and context
