@@ -1,5 +1,15 @@
 @page {
   margin: 1cm;
   margin-bottom: 1cm;
+  margin-right: 2cm;
+  margin-left: 2cm;
   size: letter;
+}
+
+body {
+  font-size: 1.2em;
+}
+
+h1 {
+  margin-bottom: 0px;
 }
