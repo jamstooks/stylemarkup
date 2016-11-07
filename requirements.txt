@@ -10,7 +10,7 @@ gunicorn==18.0
 html5lib==0.99
 ipython==1.1.0
 pisa==3.0.33
-psycopg2==2.5.1
+psycopg2
 reportlab==2.7
 requests==2.1.0
 six==1.4.1
