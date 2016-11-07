@@ -6,12 +6,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$ooo(#zxeik4&8m!=9qyp6%ek&wq8u0uzu3#h8ivxp_cph#u97'
+SECRET_KEY = os.environ.get("SECRET_KEY", 'blahblah')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", False)
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 TEMPLATE_DIRS = [os.path.join(os.path.dirname(__file__), "templates")]
 
 ALLOWED_HOSTS = ['*']
@@ -28,7 +28,7 @@ INSTALLED_APPS = (
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'bootstrapform',
     'style_markup.transformer',
 )
