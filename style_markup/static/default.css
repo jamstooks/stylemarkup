@@ -40,7 +40,19 @@ body, html {
 }
 
 .document h2 {
+    font-size: 1.7em;
+}
+
+.document h3 {
     font-size: 1.5em;
+}
+
+.document h4 {
+    font-size: 1.3em;
+}
+
+.document h5 {
+    font-size: 1.2em;
 }
 
 @media screen {
@@ -50,7 +62,7 @@ body, html {
         margin: 20px auto;
         padding: 20px 50px;
     }
-    
+
     .document td, .document th {
         padding: 15px;
     }
@@ -63,11 +75,11 @@ body, html {
         margin: auto;
         padding: auto;
     }
-    
+
     .document tr {
         border: 0;
     }
-    
+
     .document td, .document th {
         padding: 5px;
         margin: 2px;
@@ -76,14 +88,14 @@ body, html {
         virtical-align: middle;
         line-height: 1.5;
     }
-    
+
     .document table {
         border-width: 10px;
         display: block;
         border: 0;
         margin-bottom: 25px;
     }
-    
+
     .document a {
         color: #4183c4;
         text-decoration: none;

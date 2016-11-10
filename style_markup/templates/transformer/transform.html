@@ -1,3 +1,8 @@
 {% extends "transformer/base.html" %}
 
+{% block style %}
+  {{ block.super }}
+  <link href='{{ project_path }}/static/default.css' rel='stylesheet' type='text/css' />
+{% endblock %}
+
 {% block markup %}{{ styled_markup }}{% endblock %}
